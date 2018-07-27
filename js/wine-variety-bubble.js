@@ -26,7 +26,6 @@ var pack1 = d3.pack()
     .padding(1.5); 
 
 d3.csv(".cs498DatavisualizationProject/data/wine_variety_stats_1.csv", function(d) {
- alert("here");
   d.value = +d.value;
   if (d.value) return d;
 }, function(error, classes) {
