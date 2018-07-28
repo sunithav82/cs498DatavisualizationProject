@@ -2,7 +2,7 @@
 
     var truncLengh = 30;
 
-     BarChart()
+    function BarChart()
 	 {
 		document.getElementById("bubble1").style.display="none";
 		document.getElementById("Chart").style.display="block";
