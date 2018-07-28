@@ -104,7 +104,8 @@
         "yaxis": "Free Lunches (Millions)"
 
     }]
-        TransformChartData(data, chartOptions);
+        TransformChartData(data, chartOptions
+		console.log(data);
 
         BuildBar("chart", data, chartOptions);
 		});
@@ -532,7 +533,7 @@
                 for (var index = 0; index < result.length; ++index) {
 
                     var data = result[index];
-
+					alert(data + index + result.length)
 
 
                     if ((data[xVarName] == chartData[i][xVarName]) && (chartData[i][opts[0].xaxis]) == filter) {
