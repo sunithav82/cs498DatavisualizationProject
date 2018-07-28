@@ -70,7 +70,7 @@ d3.csv(path, function(d) {
 
       //newch
       .on("mouseover", function(d) {
-              tooltip.text(d.class + ": " + format(d.value) + ' Number of Free Lunches'); //not working??
+              tooltip.text(d.class + ": " + format(d.value) + ' reviews'); //not working??
               tooltip.style("visibility", "visible");
       })
       .on("mousemove", function() {
@@ -90,7 +90,7 @@ d3.csv(path, function(d) {
     .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
     .enter().append("tspan")
       .attr("x", 0)
-      .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * 10; })
+      .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
       .text(function(d) { return d; });
 
   node.append("title")
