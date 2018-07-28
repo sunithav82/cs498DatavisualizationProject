@@ -90,9 +90,11 @@
 
     function Plot() {
 
-        TransformChartData(chartData, chartOptions);
+	d3.csv("/cs498DatavisualizationProject/data/wine_variety_stats_1.csv", function(data){
+        TransformChartData(data, chartOptions);
 
-        BuildBar("chart", chartData, chartOptions);
+        BuildBar("chart", data, chartOptions);
+		}
 
     }
 
@@ -638,12 +640,6 @@
 
     }
 
-
-
-
-
-    var chartData = d3.csv("/cs498DatavisualizationProject/data/wine_variety_stats_1.csv", function(data){
-    console.log(data);
 });
 
 
