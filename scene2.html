@@ -161,7 +161,7 @@
 
         var yAry = runningData.map(function (el) {
 
-            return parseFloat(el[yVarName]);
+            return el[yVarName]);
 
         });
 
@@ -534,7 +534,7 @@
                 for (var index = 0; index < result.length; ++index) {
 
                     var data = result[index];
-					alert(data + index + result.length)
+				
 
 
                     if ((data[xVarName] == chartData[i][xVarName]) && (chartData[i][opts[0].xaxis]) == filter) {
