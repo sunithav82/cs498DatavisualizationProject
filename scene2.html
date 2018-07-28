@@ -95,7 +95,7 @@
 
         "captions": [{ "1970s": "1970s", "1980s": "1980s", "1990s": "1990s" , "2000s": "2000s","2010s": "2010s"  }],
 
-        "color": [{ "1970s": "#FFA500", "1980s": "#0070C0", "1990s": "#ff0000", "2000ss": "#FFA500", "2010s": "#0070C0" }],
+        "color": [{ "1970s": "#FFA500", "1980s": "#0070C0", "1990s": "#ff0000", "2000s": "#FFA500", "2010s": "#0070C0" }],
 
         "xaxis": "Decade",
 
@@ -603,7 +603,7 @@
 
                     if (data[xVarName] == chartData[i][xVarName]) {
 
-                        result[index][yVarName] = result[index][yVarName] + chartData[i][yVarName];
+                        result[index][yVarName] = parseInt(result[index][yVarName]) + parseInt(chartData[i][yVarName]);
 
                         hasMatch = true;
 
