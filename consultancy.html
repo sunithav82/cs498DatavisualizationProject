@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/tabulate.js"></script>
     <style>
 
       body {
@@ -77,26 +76,14 @@
         <p style='font-style: italic;'>We have over 130,000 records in our database. Hover over each bubble to see the number of reviews we have for each wine variety.</p>
         <!--Bubble Chart-->
         <div id='bubble1' style='margin:auto;width:60%'>
+		<h4>Overview of our data assets</h4>
           <script src="js/wine-variety-bubble.js"></script>
         </div>
-
-        <h4 style='margin-top:60px'>Pick a wine designation to look at the reviews</h4>
-        
-        <div>
-          <form id="pickawine-form">
-            <select id="pickawine-select">
-              <option>Pick a wine designation</option>
-              <option>Zweigelt</option>
-              <option>Zuc di Volpe</option>
-            </select>
-          </form>
+		<div id='bubble2' style='margin:auto;width:60
+		<h4>Overview of our data assets2</h4>
+          <script src="js/wine-variety-bubble.js"></script>
         </div>
-        <p>Results: </p>
-        <div id='pickawine-result' style='width: 80%'></div>
-        <script src="js/pick-a-wine-tb.js"></script>
-
-      </div>  
-
+        
     </div>
     
   </body>
