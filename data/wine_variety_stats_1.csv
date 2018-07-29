@@ -1,52 +1,52 @@
-id,value
-Alabama ,740475
-Alaska ,131483
-Arizona ,990378
-Arkansas ,486157
-California ,6178788
-Colorado ,863121
-Connecticut ,549295
-Delaware ,127791
-District of Columbia ,75411
-Florida ,2691881
-Georgia ,1702766
-Hawaii ,184760
-Idaho ,279277
-Illinois ,2031835
-Indiana ,1039797
-Iowa ,490630
-Kansas ,470283
-Kentucky ,675167
-Louisiana ,693980
-Maine ,179323
-Maryland ,856775
-Massachusetts ,952970
-Michigan ,1511030
-Minnesota ,845291
-Mississippi ,491220
-Missouri ,898402
-Montana ,142908
-Nebraska ,303332
-Nevada ,443158
-New Hampshire ,187940
-New Jersey ,1363967
-New Mexico ,335922
-New York ,2708341
-North Carolina ,1506080
-North Dakota ,98993
-Ohio ,1656390
-Oklahoma ,665404
-Oregon ,533966
-Pennsylvania ,1716262
-Rhode Island ,141124
-South Carolina ,735998
-South Dakota ,130294
-Tennessee ,982312
-Texas ,5077507
-Utah ,600146
-Vermont ,83568
-Virginia ,1235561
-Washington ,1050904
-West Virginia ,283044
-Wisconsin ,871376
-Wyoming ,91533
+id,value,short
+Alabama ,740475,AL
+Alaska ,131483,AK
+Arizona ,990378,AZ
+Arkansas ,486157,AR
+California ,6178788,CA
+Colorado ,863121,CO
+Connecticut ,549295,CT
+Delaware ,127791,DE
+Florida ,2691881,FL
+Georgia ,1702766,GA
+Hawaii ,184760,HI
+Idaho ,279277,ID
+Illinois ,2031835,IL
+Indiana ,1039797,IN
+Iowa ,490630,IA
+Kansas ,470283,KS
+Kentucky ,675167,KY
+Louisiana ,693980,LA
+Maine ,179323,ME
+Maryland ,856775,MD
+Massachusetts ,952970,MA
+Michigan ,1511030,MI
+Minnesota ,845291,MN
+Mississippi ,491220,MS
+Missouri ,898402,MO
+Montana ,142908,MT
+Nebraska ,303332,NE
+Nevada ,443158,NV
+New Hampshire ,187940,NH
+New Jersey ,1363967,NJ
+New Mexico ,335922,NM
+New York ,2708341,NY
+North Carolina ,1506080,NC
+North Dakota ,98993,ND
+Ohio ,1656390,OH
+Oklahoma ,665404,OK
+Oregon ,533966,OR
+Pennsylvania ,1716262,PA
+Rhode Island ,141124,RI
+South Carolina ,735998,SC
+South Dakota ,130294,SD
+Tennessee ,982312,TN
+Texas ,5077507,TX
+Utah ,600146,UT
+Vermont ,83568,VT
+Virginia ,1235561,VA
+Washington ,1050904,WA
+West Virginia ,283044,WV
+Wisconsin ,871376,WI
+Wyoming ,91533,WY
+District of Columbia ,75411,DC
