@@ -2,10 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://d3js.org/d3.v2.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/barchart.js"></script>
-	<script src="js/tabulate.js"></script>
     <style>
       body {
           font-family: "Lato", sans-serif;
@@ -31,6 +29,16 @@
       .sidenav a:hover {
           color: #f1f1f1;
       }
+	 .sidenav h4 {
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #818181;
+          display: block;
+      }
+       .sidenav h4:hover {
+          color: #f1f1f1;
+	    }
       .main {
           margin-left: 160px; /* Same as the width of the sidenav */
           font-size: 15px; /* Increased text to enable scrolling */
@@ -53,26 +61,21 @@
   <body>
 
     <div class="sidenav">
-      <a href="/index.html">About the data set</a>
-      <a href='/consultancy.html'>Consultancy</a>
+      <h4>Free Lunches in US Public Schools</h4>
     </div>
 
     <div class="main">
-      <a href="#" class="Scene 1">&laquo; Previous</a>
-	  <a href="#" class="Scene 2" onclick="BarChart();" >Next &raquo;</a>
+      <a href="#" class="Scene 1">Scene1</a>
+	  <a href="/cs498DatavisualizationProject/scene2.html" class="Scene 2"> Scene2</a>
       <div id='side-bar-2'>
-        <h2>Consultancy</h2>
+        <h2>Free Lunches in US Public Schools - Statewise numbers</h2>
 
-        <h4>Overview of our data assets</h4>
-        <p style='font-style: italic;'>We have over 130,000 records in our database. Hover over each bubble to see the number of reviews we have for each wine variety.</p>
+        <h4>A bubble chart representing the number of free lunches served in 2011-2012 years.</h4>
+        <p style='font-style: italic;'>Hover over each bubble to see the number of free lunches served for a state.</p>
         <!--Bubble Chart-->
         <div id='bubble1' style='margin:auto;width:60%'>
 		<h4>Overview of our data assets</h4>
           <script src="js/wine-variety-bubble.js"></script>
-        </div>
-		<div id='chart' style='margin:auto;width:60%'>
-		<h4>Bar Chart</h4>
-        </div>
         
     </div>
     

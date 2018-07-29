@@ -2,12 +2,9 @@ var salesData;
 
     var truncLengh = 30;
 
-    function BarChart()
-	 {
-		document.getElementById("bubble1").style.display="none";
-		document.getElementById("chart").style.display="block" ;
+    $(document).ready(function () {
         Plot();
-     }
+    });
 
     function Plot() {
 	d3.csv("/cs498DatavisualizationProject/data/FreeLunches.csv", function(data){

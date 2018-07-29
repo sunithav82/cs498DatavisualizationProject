@@ -35,11 +35,11 @@ d3.csv(path, function(d) {
       .sum(function(d) { return d.value; })
       .each(function(d) {
         if (id = d.data.id) {
-          var id, i = id.lastIndexOf(".");
+          alert(id);
           d.id = id;
           // d.package = id.slice(0, i);
           // d.class = id.slice(i + 1);
-          d.class = id
+          d.class = id;
         }
       });
 
@@ -70,7 +70,7 @@ d3.csv(path, function(d) {
 
       //newch
       .on("mouseover", function(d) {
-              tooltip.text(d.class + ": " + format(d.value) + ' reviews'); //not working??
+              tooltip.text(d.class + ": " + format(d.value) + ' free lunches'); //not working??
               tooltip.style("visibility", "visible");
       })
       .on("mousemove", function() {
@@ -87,7 +87,7 @@ d3.csv(path, function(d) {
   node.append("text")
       .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
     .selectAll("tspan")
-    .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
+    .data(function(d) { return d.id; })
     .enter().append("tspan")
       .attr("x", 0)
       .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
