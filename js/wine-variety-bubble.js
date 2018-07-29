@@ -103,7 +103,7 @@ d3.csv(path, function(d) {
 function createAnno(coords){
 		const thisAnno = [{
 		note: { label: "Hi"},
-  			x: 100, y 100,
+  			x: 100, y:100,
   			dy: 137, dx: 162,
   			type: d3.annotationCalloutElbow,
  		        connector: { end: "arrow" }
