@@ -62,9 +62,9 @@
 
         });
         var capAry = runningData.map(function (el) { return el.caption; });
-        var x = d3.scale.ordinal().domain(xAry).rangeRoundBands([0, width], .5);
-        var y = d3.scale.linear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
-        var rcolor = d3.scale.ordinal().range(runningColors);
+        var x = d3.scaleOrdinal().domain(xAry).rangeRoundBands([0, width], .5);
+        var y = d3.scaleLinear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
+        var rcolor = d3.scaleOrdinal().range(runningColors);
         chart = chart
                     .append("svg")  //append svg element inside #chart
                     .attr("width", width + margin.left + margin.right)    //set width
