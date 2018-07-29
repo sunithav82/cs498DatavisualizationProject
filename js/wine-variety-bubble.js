@@ -101,25 +101,17 @@ d3.csv(path, function(d) {
 });
 
 function createAnno(coords){
-
-		type=d3.annotationLabel;
 		const thisAnno = [{
-		note: {
-			label:blue,
-			title:blue,
-			wrap:150,
-			align:"middle",
-			},
-			x:coords[0]-margin.left,
-			y:coords[1]-margin.top,
-			dx:30,
-			dy:-30
-
+		note: { label: "Hi"},
+  			x: 100, y 100,
+  			dy: 137, dx: 162,
+  			type: d3.annotationCalloutElbow,
+ 		        connector: { end: "arrow" }
 		}];
 
 		const makeThis = d3.annotation()
 			.type(type)
-			.annotations("test")
+			.annotations(thisAnno)
 			.editMode(true);
 
 		svg.append("g")
