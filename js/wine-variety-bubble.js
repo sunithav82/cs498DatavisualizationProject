@@ -66,28 +66,7 @@ d3.csv(path, function(d) {
       .attr("r", function(d) { return d.r; })
       // .style("fill", function(d) { return color(d.package); })
       .style("fill", function(d) { return color(d.class); })
-      .on("click",function(d){
-				var coordinates=[0,0];
-				coordinates=d3.mouse(this);
-				const thisAnno = [{
-				note: {  label: d.data.value,
-    					bgPadding: 20,
-    					title: d.data.id},
-  				type: d3.annotationLabel,
- 		        	connector: { end: "arrow" },
-				className: "show-bg",
-  				dy: 137,
-  				dx: 430
-				}];
-
-				const makeThis = d3.annotation()
-					.annotations(thisAnno)
-					.editMode(true);
-
-				d3.select("#anno").append("g")
-					.call(makeThis).updateText("hello");
-					})
-
+  
       //newch
       .on("mouseover", function(d) {
               tooltip.text(d.class + ": " + format(d.value) + ' free lunches'); //not working??
