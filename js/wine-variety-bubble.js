@@ -35,11 +35,12 @@ d3.csv(path, function(d) {
       .sum(function(d) { return d.value; })
       .each(function(d) {
         if (id = d.data.id) {
-          var id, i = id.lastIndexOf(".");
+          var id, 
+          alert(id);
           d.id = id;
           // d.package = id.slice(0, i);
           // d.class = id.slice(i + 1);
-          d.class = id
+          d.class = id;
         }
       });
 
@@ -70,7 +71,7 @@ d3.csv(path, function(d) {
 
       //newch
       .on("mouseover", function(d) {
-              tooltip.text(d.id + ": " + format(d.value) + 'free lunches'); //not working??
+              tooltip.text(d.class + ": " + format(d.value) + ' free lunches'); //not working??
               tooltip.style("visibility", "visible");
       })
       .on("mousemove", function() {
