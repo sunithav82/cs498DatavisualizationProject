@@ -24,7 +24,7 @@ var color = d3.scaleOrdinal(d3.schemeCategory20c);
 var pack1 = d3.pack()
     .size([width, height])
     .padding(1.5); 
-var path = "/cs498DatavisualizationProject/data/wine_variety_stats_1.csv"
+var path = "/cs498DatavisualizationProject/data/wine_variety_stats_2.csv"
 d3.csv(path, function(d) {
   d.value = d.value;
   if (d.value) return d;
