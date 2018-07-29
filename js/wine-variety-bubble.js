@@ -35,7 +35,6 @@ d3.csv(path, function(d) {
       .sum(function(d) { return d.value; })
       .each(function(d) {
         if (id = d.data.id) {
-          alert(id);
           d.id = id;
           // d.package = id.slice(0, i);
           // d.class = id.slice(i + 1);
@@ -87,7 +86,7 @@ d3.csv(path, function(d) {
   node.append("text")
       .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
     .selectAll("tspan")
-    .data(function(d) { return d.id; })
+    .data(function(d) { return d.short; })
     .enter().append("tspan")
       .attr("x", 0)
       .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
