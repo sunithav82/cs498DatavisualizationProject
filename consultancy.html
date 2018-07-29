@@ -7,11 +7,9 @@
 	<script src="js/barchart.js"></script>
 	<script src="js/tabulate.js"></script>
     <style>
-
       body {
           font-family: "Lato", sans-serif;
       }
-
       .sidenav {
           height: 100%;
           width: 160px;
@@ -23,7 +21,6 @@
           overflow-x: hidden;
           padding-top: 20px;
       }
-
       .sidenav a {
           padding: 6px 8px 6px 16px;
           text-decoration: none;
@@ -31,31 +28,25 @@
           color: #818181;
           display: block;
       }
-
       .sidenav a:hover {
           color: #f1f1f1;
       }
-
       .main {
           margin-left: 160px; /* Same as the width of the sidenav */
           font-size: 15px; /* Increased text to enable scrolling */
           padding: 0px 10px;
       }
-
       @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
       }
-
       #pickawine-result td, th {
         padding: 5px 5px;
       }
-
       #pickawine-result tr {
         text-align: center;
       }
       
-
     </style>
   </head>
 
@@ -63,28 +54,27 @@
 
     <div class="sidenav">
       <a href="/index.html">About the data set</a>
-      <a href='/consultancy.html'>Consultancy</a
-	  
+      <a href='/consultancy.html'>Consultancy</a>
     </div>
 
     <div class="main">
-      <a href="#" class="Scene 1">&laquo; Scene 1</a>
-	  <a href="#" class="Scene 2" onclick="BarChart();" >Scene 2 &raquo;</a>
+      <a href="#" class="Scene 1">&laquo; Previous</a>
+	  <a href="#" class="Scene 2" onclick="BarChart();" >Next &raquo;</a>
       <div id='side-bar-2'>
         <h2>Consultancy</h2>
 
-        <h4>Free Lunches in US Public schools</h4>
-        <p style='font-style: italic;'>US schools have been providing school lunches to needy students for decades. Analyzing the number of students receiving free lunches across states.</p>
+        <h4>Overview of our data assets</h4>
+        <p style='font-style: italic;'>We have over 130,000 records in our database. Hover over each bubble to see the number of reviews we have for each wine variety.</p>
         <!--Bubble Chart-->
         <div id='bubble1' style='margin:auto;width:60%'>
-		<h4>Number of Free Lunches served - Statewise</h4>
+		<h4>Overview of our data assets</h4>
           <script src="js/wine-variety-bubble.js"></script>
         </div>
 		<div id='chart' style='margin:auto;width:60%'>
-		<h4>Number of Free Lunches served - Trend over Decades.</h4>
+		<h4>Bar Chart</h4>
         </div>
         
     </div>
     
-  </body>
+</body>
 </html> 
