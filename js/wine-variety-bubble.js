@@ -35,7 +35,6 @@ d3.csv(path, function(d) {
       .sum(function(d) { return d.value; })
       .each(function(d) {
         if (id = d.data.id) {
-          var id, 
           alert(id);
           d.id = id;
           // d.package = id.slice(0, i);
