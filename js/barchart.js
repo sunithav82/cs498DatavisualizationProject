@@ -113,7 +113,7 @@
                         return y(d.FreeLunches) + margin.top - 20;
                     })
 
-                    .attr("width", x.rangeBand() + 10)
+                    .attr("width", x.bandwidth() + 10)
                     .attr("x", function (d) {
                         return (margin.left - 5);
                     })
@@ -129,7 +129,7 @@
                     .attr("y", function (d) {
                         return y(d[yVarName]) + margin.top - 15;
                     })
-                    .attr("width", x.rangeBand())
+                    .attr("width", x.bandwidth() )
                     .attr("x", function (d) {
                         return (margin.left);
                     })
@@ -163,7 +163,7 @@
         })
             .transition().delay(function (d, i) { return i * 300; })
             .duration(1000)
-            .attr("width", x.rangeBand()) //set width base on range on ordinal data
+            .attr("width", x.bandwidth()) //set width base on range on ordinal data
             .transition().delay(function (d, i) { return i * 300; })
             .duration(1000);
         bar.selectAll("rect").style("fill", function (d) {
@@ -174,7 +174,7 @@
         });
 
         bar.append("text")
-            .attr("x", x.rangeBand() / 2 + margin.left - 10)
+            .attr("x", x.bandwidth() / 2 + margin.left - 10)
             .attr("y", function (d) { return y(d[yVarName]) + margin.top - 25; })
             .attr("dy", ".35em")
             .text(function (d) {
