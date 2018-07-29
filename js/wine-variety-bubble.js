@@ -84,7 +84,7 @@ d3.csv(path, function(d) {
 					.annotations(thisAnno)
 					.editMode(true);
 
-				d3.select("anno").append("g")
+				d3.select("#anno").append("g")
 					.call(makeThis);
 					})
 
