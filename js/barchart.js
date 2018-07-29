@@ -77,7 +77,7 @@
                             return "translate(" + x(d[xVarName]) + ", 0)";
                         });
         var ctrtxt = 0;
-        var xAxis = d3.svg.axisBottom(x)
+        var xAxis = d3.axisBottom(x)
                     .tickFormat(function (d) {
                         if (level == 0) {
                             var mapper = options[0].captions[0]
@@ -90,7 +90,7 @@
                         }
 
                     });
-        var yAxis = d3.svg.axisLeft(y)
+        var yAxis = d3.axisLeft(y)
                         .scale(y)
                         .ticks(5); //orient left because y-axis tick labels will appear on the left side of the axis.
         bar.append("rect")
