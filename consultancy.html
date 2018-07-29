@@ -10,7 +10,7 @@
       }
       .sidenav {
           height: 100%;
-          width: 200px;
+          width: 400px;
           position: fixed;
           z-index: 1;
           top: 0;
@@ -30,7 +30,11 @@
           color: #f1f1f1;
       }
         .sidenav p: {
-          color: #f1f1f1;
+          padding: 6px 8px 6px 16px;
+          text-decoration: none;
+          font-size: 11px;
+          color: #818181;
+          display: block;
       }
 	 .sidenav h4 {
           padding: 6px 8px 6px 16px;
@@ -43,19 +47,13 @@
           color: #f1f1f1;
 	    }
       .main {
-          margin-left: 200px; /* Same as the width of the sidenav */
+          margin-left: 400px; /* Same as the width of the sidenav */
           font-size: 15px; /* Increased text to enable scrolling */
           padding: 0px 10px;
       }
       @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
-      }
-      #pickawine-result td, th {
-        padding: 5px 5px;
-      }
-      #pickawine-result tr {
-        text-align: center;
       }
       
     </style>
@@ -72,18 +70,17 @@
     </div>
 
     <div class="main">
-      <a href="#" class="Scene 1">Scene1</a>
-	  <a href="/cs498DatavisualizationProject/scene2.html" class="Scene 2"> Scene2</a>
+      
       <div id='side-bar-2'>
         <h2>Free Lunches in US Public Schools - Statewise numbers</h2>
 
         <h4>A bubble chart representing the number of free lunches served in 2011-2012 years.</h4>
         <p style='font-style: italic;'>Hover over each bubble to see the number of free lunches served for a state.</p>
         <!--Bubble Chart-->
+	<a href="#" class="Scene 1">slide 1</a>
+	  <a href="/cs498DatavisualizationProject/scene2.html" class="Scene 2"> slide 2</a>     
         <div id='bubble1' style='margin:auto;width:60%'>
-		<h4>Overview of our data assets</h4>
-          <script src="js/wine-variety-bubble.js"></script>
-        
+          <script src="js/wine-variety-bubble.js"></script>        
     </div>
     
 </body>
