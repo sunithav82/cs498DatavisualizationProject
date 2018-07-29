@@ -70,10 +70,10 @@ d3.csv(path, function(d) {
 				var coordinates=[0,0];
 				coordinates=d3.mouse(this);
 				const thisAnno = [{
-				note: { label: "Hi"},
-  				x: 100, y:100,
-  				dy: 137, dx: 162,
-  				type: d3.annotationCalloutElbow,
+				note: {  label: "Longer text to show text wrapping",
+    					bgPadding: 20,
+    					title: "Annotations :)",
+  				type: d3.annotationLabel,
  		        	connector: { end: "arrow" }
 				}];
 
