@@ -71,8 +71,8 @@ d3.csv(path, function(d) {
               tooltip.text(d.class + " served " + format(d.value) + ' free lunches in 2011. This is a percentage change from ' + parseFloat(d.data.last) +" in 2005 to " + format(d.data.current) +"."); //not working??
               tooltip.style("visibility", "visible");
               tooltip.style("background-color", function() { 
-                  console.log(d);
-                  return parseFloat(d.data.diff) >0 ? "rgba(0, 200, 0, 0.75)" : "rgba(200, 0, 0, 0.75)";
+                  alert(parseFloat(d.data.diff) >0);
+                  return parseFloat(d.data.diff) >0 ? "rgba(0, 255, 0, 0.75)" : "rgba(255, 0, 0, 0.75)";
               });
       })
       .on("mousemove", function() {
