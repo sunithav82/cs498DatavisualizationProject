@@ -78,7 +78,6 @@ d3.csv(path, function(d) {
 				}];
 
 				const makeThis = d3.annotation()
-					.type(type)
 					.annotations(thisAnno)
 					.editMode(true);
 
