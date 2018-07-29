@@ -72,9 +72,12 @@ d3.csv(path, function(d) {
 				const thisAnno = [{
 				note: {  label: "Longer text to show text wrapping",
     					bgPadding: 20,
-    					title: "Annotations :)",
+    					title: "Annotations :)"},
   				type: d3.annotationLabel,
- 		        	connector: { end: "arrow" }
+ 		        	connector: { end: "arrow" },
+				className: "show-bg",
+  				dy: 137,
+  				dx: 430
 				}];
 
 				const makeThis = d3.annotation()
