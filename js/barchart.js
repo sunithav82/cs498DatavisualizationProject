@@ -5,7 +5,7 @@
     function BarChart()
 	 {
 		document.getElementById("bubble1").style.display="none";
-		document.getElementById("chart").style.display="block" ;
+		//document.getElementById("chart").style.display="block" ;
         Plot();
      }
 
