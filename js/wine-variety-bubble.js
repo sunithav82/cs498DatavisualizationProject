@@ -36,6 +36,7 @@ d3.csv(path, function(d) {
       .each(function(d) {
         if (id = d.data.id) {
           d.id = id;
+            alert(d.data.short);
           // d.package = id.slice(0, i);
           // d.class = id.slice(i + 1);
           d.class = id;
