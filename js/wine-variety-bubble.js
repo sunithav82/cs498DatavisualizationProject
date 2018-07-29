@@ -66,13 +66,13 @@ d3.csv(path, function(d) {
       .attr("r", function(d) { return d.r; })
       // .style("fill", function(d) { return color(d.package); })
       .style("fill", function(d) { return color(d.class); })
-      .on("click",function(){
+      .on("click",function(d){
 				var coordinates=[0,0];
 				coordinates=d3.mouse(this);
 				const thisAnno = [{
 				note: {  label: "Longer text to show text wrapping",
     					bgPadding: 20,
-    					title: "Annotations :)"},
+    					title: d.data.id + " has " + d.data.value + " free lunches provided this year.},
   				type: d3.annotationLabel,
  		        	connector: { end: "arrow" },
 				className: "show-bg",
