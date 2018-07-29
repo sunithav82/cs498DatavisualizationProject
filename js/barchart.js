@@ -1,11 +1,11 @@
- var salesData;
+var salesData;
 
     var truncLengh = 30;
 
     function BarChart()
 	 {
 		document.getElementById("bubble1").style.display="none";
-		//document.getElementById("chart").style.display="block" ;
+		document.getElementById("chart").style.display="block" ;
         Plot();
      }
 
@@ -62,9 +62,9 @@
 
         });
         var capAry = runningData.map(function (el) { return el.caption; });
-        var x = d3.scaleBand().rangeRound([0, width], .5);
-        var y = d3.scaleLinear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
-        var rcolor = d3.scaleOrdinal().range(runningColors);
+        var x = d3.scale.ordinal().domain(xAry).rangeRoundBands([0, width], .5);
+        var y = d3.scale.linear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
+        var rcolor = d3.scale.ordinal().range(runningColors);
         chart = chart
                     .append("svg")  //append svg element inside #chart
                     .attr("width", width + margin.left + margin.right)    //set width
@@ -77,7 +77,9 @@
                             return "translate(" + x(d[xVarName]) + ", 0)";
                         });
         var ctrtxt = 0;
-        var xAxis = d3.axisBottom(x)
+        var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom").ticks(xAry.length)
                     .tickFormat(function (d) {
                         if (level == 0) {
                             var mapper = options[0].captions[0]
@@ -90,9 +92,9 @@
                         }
 
                     });
-        var yAxis = d3.axisLeft(y)
+        var yAxis = d3.svg.axis()
                         .scale(y)
-                        .ticks(5); //orient left because y-axis tick labels will appear on the left side of the axis.
+                        .orient("left").ticks(5); //orient left because y-axis tick labels will appear on the left side of the axis.
         bar.append("rect")
             .attr("y", function (d) {
                 return y(d.FreeLunches) + margin.top - 15;
@@ -113,7 +115,7 @@
                         return y(d.FreeLunches) + margin.top - 20;
                     })
 
-                    .attr("width", x.bandwidth() + 10)
+                    .attr("width", x.rangeBand() + 10)
                     .attr("x", function (d) {
                         return (margin.left - 5);
                     })
@@ -129,7 +131,7 @@
                     .attr("y", function (d) {
                         return y(d[yVarName]) + margin.top - 15;
                     })
-                    .attr("width", x.bandwidth() )
+                    .attr("width", x.rangeBand())
                     .attr("x", function (d) {
                         return (margin.left);
                     })
@@ -163,7 +165,7 @@
         })
             .transition().delay(function (d, i) { return i * 300; })
             .duration(1000)
-            .attr("width", x.bandwidth()) //set width base on range on ordinal data
+            .attr("width", x.rangeBand()) //set width base on range on ordinal data
             .transition().delay(function (d, i) { return i * 300; })
             .duration(1000);
         bar.selectAll("rect").style("fill", function (d) {
@@ -174,7 +176,7 @@
         });
 
         bar.append("text")
-            .attr("x", x.bandwidth() / 2 + margin.left - 10)
+            .attr("x", x.rangeBand() / 2 + margin.left - 10)
             .attr("y", function (d) { return y(d[yVarName]) + margin.top - 25; })
             .attr("dy", ".35em")
             .text(function (d) {
@@ -271,4 +273,4 @@
         runningData = result;
         runningColors = resultColors;
         return;
-    }
+}
