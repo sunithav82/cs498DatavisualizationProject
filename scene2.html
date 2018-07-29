@@ -115,7 +115,7 @@
 
         "xaxisl1": "Year",
 
-        "yaxis": "FreeLunches in Millions"
+        "yaxis": "FreeLunches"
 
     }]
 		console.log(data);
@@ -479,7 +479,11 @@
 
         //.text("Year");
 
-
+chart.append("g")
+  .attr("class","legend")
+  .attr("transform","translate(50,30)")
+  .style("font-size","12px")
+  .call(d3.legend);
 
         chart.append("g")
 
