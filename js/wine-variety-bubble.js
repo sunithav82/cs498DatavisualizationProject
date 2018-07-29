@@ -70,9 +70,9 @@ d3.csv(path, function(d) {
 				var coordinates=[0,0];
 				coordinates=d3.mouse(this);
 				const thisAnno = [{
-				note: {  label: "Longer text to show text wrapping",
+				note: {  label: d.data.value,
     					bgPadding: 20,
-    					title: function(d) { return d.data.id + " Info "}},
+    					title: d.data.id},
   				type: d3.annotationLabel,
  		        	connector: { end: "arrow" },
 				className: "show-bg",
