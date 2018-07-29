@@ -36,7 +36,6 @@ d3.csv(path, function(d) {
       .each(function(d) {
         if (id = d.data.id) {
           d.id = id;
-            alert(d.data.short);
           // d.package = id.slice(0, i);
           // d.class = id.slice(i + 1);
           d.class = id;
@@ -87,10 +86,11 @@ d3.csv(path, function(d) {
   node.append("text")
       .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
     .selectAll("tspan")
-    .data(function(d) { return d.short; })
+    .data(function(d) { console.log(d); return d.short; })
     .enter().append("tspan")
       .attr("x", 0)
-      .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
+      .attr("y", function(d, i, nodes) { console.log(d) ;
+                                        return 13 + (i - nodes.length / 2 - 0.5) * 10; })
       .text(function(d) { return d; });
 
   node.append("title")
