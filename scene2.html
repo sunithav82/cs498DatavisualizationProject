@@ -476,8 +476,7 @@
             .attr("y", -6)
 
         .style("text-anchor", "end")
-
-        //.text("Year");
+        .text("Year");
 
         chart.append("g")
 
@@ -496,8 +495,7 @@
             .attr("dy", ".71em")
 
             .style("text-anchor", "end")
-
-        //.text("Sales Data");
+            .text("Free Lunches in Millions");
 
 
 
@@ -510,12 +508,6 @@
             .attr("transform", " translate(-20,10) rotate(-35)");
 
         }
-
-	chart.append("g")
-  .attr("class","legend")
-  .attr("transform","translate(50,30)")
-  .style("font-size","12px")
-  .call(d3.legend);
 
     }
 
