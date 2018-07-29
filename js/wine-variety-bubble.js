@@ -72,7 +72,7 @@ d3.csv(path, function(d) {
               tooltip.style("visibility", "visible");
               tooltip.style("background-color", function() { 
                   console.log(d);
-                  return parseFloat(d.data.current) - parseFloat(d.data.last) >0 ? "rgba(0, 1, 0, 0.75)" : "rgba(1, 0, 0, 0.75)";
+                  return parseFloat(d.data.diff) >0 ? "rgba(0, 200, 0, 0.75)" : "rgba(200, 0, 0, 0.75)";
               });
       })
       .on("mousemove", function() {
