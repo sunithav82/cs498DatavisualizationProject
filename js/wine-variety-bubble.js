@@ -66,6 +66,11 @@ d3.csv(path, function(d) {
       .attr("r", function(d) { return d.r; })
       // .style("fill", function(d) { return color(d.package); })
       .style("fill", function(d) { return color(d.class); })
+      .on("click",function(){
+				var coordinates=[0,0];
+				coordinates=d3.mouse(this);
+				createAnno(coordinates)
+			})
 
       //newch
       .on("mouseover", function(d) {
@@ -94,3 +99,33 @@ d3.csv(path, function(d) {
   node.append("title")
       .text(function(d) { return d.id + "\n" + format(d.value); });
 });
+
+function createAnno(coords){
+
+		type=d3.annotationLabel;
+		const thisAnno = [{
+		note: {
+			label:blue,
+			title:blue,
+			wrap:150,
+			align:"middle",
+			},
+			x:coords[0]-margin.left,
+			y:coords[1]-margin.top,
+			dx:30,
+			dy:-30
+
+		}];
+
+		const makeThis = d3.annotation()
+			.type(type)
+			.annotations("test")
+			.editMode(true);
+
+		svg.append("g")
+			.attr("transform","translate("+margin.left+","+margin.top+")")
+			.attr("class","annotation-group")
+			.call(makeThis);
+
+	}//end function
+
