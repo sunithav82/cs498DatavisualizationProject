@@ -26,7 +26,7 @@ var pack1 = d3.pack()
     .padding(1.5); 
 var path = "/cs498DatavisualizationProject/data/wine_variety_stats_1.csv"
 d3.csv(path, function(d) {
-  d.value = +d.value;
+  d.value = d.value;
   if (d.value) return d;
 }, function(error, classes) {
   if (error) throw error;
