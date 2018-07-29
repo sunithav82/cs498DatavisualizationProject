@@ -62,7 +62,7 @@
 
         });
         var capAry = runningData.map(function (el) { return el.caption; });
-        var x = d3.scaleOrdinal().domain(xAry).rangeBands([0, width], .5);
+        var x = d3.scaleBand().rangeRound([0, width], .5);
         var y = d3.scaleLinear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
         var rcolor = d3.scaleOrdinal().range(runningColors);
         chart = chart
