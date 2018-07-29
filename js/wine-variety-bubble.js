@@ -72,7 +72,7 @@ d3.csv(path, function(d) {
 				const thisAnno = [{
 				note: {  label: "Longer text to show text wrapping",
     					bgPadding: 20,
-    					title: d.data.id + " Info "},
+    					title: function(d) { return d.data.id + " Info "}},
   				type: d3.annotationLabel,
  		        	connector: { end: "arrow" },
 				className: "show-bg",
