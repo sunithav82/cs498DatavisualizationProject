@@ -81,7 +81,7 @@ d3.csv(path, function(d) {
 					.annotations(thisAnno)
 					.editMode(true);
 
-				svg.append("g")
+				chart.append("g")
 					.attr("transform","translate("+margin.left+","+margin.top+")")
 					.attr("class","annotation-group")
 					.call(makeThis);
