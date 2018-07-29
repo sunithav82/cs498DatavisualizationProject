@@ -479,12 +479,6 @@
 
         //.text("Year");
 
-chart.append("g")
-  .attr("class","legend")
-  .attr("transform","translate(50,30)")
-  .style("font-size","12px")
-  .call(d3.legend);
-
         chart.append("g")
 
             .attr("class", "y axis")
@@ -517,7 +511,11 @@ chart.append("g")
 
         }
 
-
+	chart.append("g")
+  .attr("class","legend")
+  .attr("transform","translate(50,30)")
+  .style("font-size","12px")
+  .call(d3.legend);
 
     }
 
