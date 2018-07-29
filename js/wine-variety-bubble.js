@@ -70,7 +70,7 @@ d3.csv(path, function(d) {
       .on("mouseover", function(d) {
               tooltip.text(d.class + " served " + format(d.value) + ' free lunches in 2011. This is a percentage change from ' + parseFloat(d.data.last) +" in 2005 to " + format(d.data.current) +"."); //not working??
               tooltip.style("visibility", "visible");
-              tooltip.style("background-color", function(d) { 
+              tooltip.style("background-color", function() { 
                   console.log(d);
                   return parseFloat(d.data.current) - parseFloat(d.data.last) >0 ? "rgba(0, 1, 0, 0.75)" : "rgba(1, 0, 0, 0.75)";
               });
