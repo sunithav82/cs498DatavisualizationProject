@@ -84,7 +84,7 @@ d3.csv(path, function(d) {
       .attr("xlink:href", function(d) { return "#" + d.id; });
 
    node.append("text")
-      .attr("clip-path", function(d) { return "url(#clip-" + d.short + ")"; })
+      .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
     .selectAll("tspan")
     .data(function(d) { return d.data.short.split(/(?=[A-Z][^A-Z])/g); })
     .enter().append("tspan")
