@@ -77,9 +77,7 @@
                             return "translate(" + x(d[xVarName]) + ", 0)";
                         });
         var ctrtxt = 0;
-        var xAxis = d3.svg.axisBottom()
-                    .scale(x)
-                    .orient("bottom").ticks(xAry.length)
+        var xAxis = d3.svg.axisBottom(x)
                     .tickFormat(function (d) {
                         if (level == 0) {
                             var mapper = options[0].captions[0]
@@ -92,9 +90,9 @@
                         }
 
                     });
-        var yAxis = d3.svg.axisLeft()
+        var yAxis = d3.svg.axisLeft(y)
                         .scale(y)
-                        .orient("left").ticks(5); //orient left because y-axis tick labels will appear on the left side of the axis.
+                        .ticks(5); //orient left because y-axis tick labels will appear on the left side of the axis.
         bar.append("rect")
             .attr("y", function (d) {
                 return y(d.FreeLunches) + margin.top - 15;
